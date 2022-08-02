@@ -13,6 +13,9 @@
 		4DB9A35028996BAF0035C1B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DB9A34E28996BAF0035C1B2 /* Main.storyboard */; };
 		4DB9A35228996BB00035C1B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DB9A35128996BB00035C1B2 /* Assets.xcassets */; };
 		4DB9A35528996BB00035C1B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DB9A35328996BB00035C1B2 /* LaunchScreen.storyboard */; };
+		8B26962D2899B2E2007AEEE9 /* SearchMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B26962C2899B2E2007AEEE9 /* SearchMovieViewController.swift */; };
+		8B6AC8442899BE2300BD507A /* SearchMovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6AC8432899BE2300BD507A /* SearchMovieView.swift */; };
+		8BF80D862899B7D500B6A512 /* ViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF80D852899B7D500B6A512 /* ViewConfiguration.swift */; };
 		F3A5B5ABC7ACDD5FF53C49B0 /* Pods_HorrorBM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D4CB30D516494CB77B9420A /* Pods_HorrorBM.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +29,9 @@
 		4DB9A35428996BB00035C1B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4DB9A35628996BB00035C1B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8625A6B850225B23043576EA /* Pods-HorrorBM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HorrorBM.debug.xcconfig"; path = "Target Support Files/Pods-HorrorBM/Pods-HorrorBM.debug.xcconfig"; sourceTree = "<group>"; };
+		8B26962C2899B2E2007AEEE9 /* SearchMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMovieViewController.swift; sourceTree = "<group>"; };
+		8B6AC8432899BE2300BD507A /* SearchMovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMovieView.swift; sourceTree = "<group>"; };
+		8BF80D852899B7D500B6A512 /* ViewConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConfiguration.swift; sourceTree = "<group>"; };
 		8D4CB30D516494CB77B9420A /* Pods_HorrorBM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HorrorBM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C80F767F1A2FCB4620705C5C /* Pods-HorrorBM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HorrorBM.release.xcconfig"; path = "Target Support Files/Pods-HorrorBM/Pods-HorrorBM.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,6 +77,8 @@
 		4DB9A34728996BAF0035C1B2 /* HorrorBM */ = {
 			isa = PBXGroup;
 			children = (
+				8BF80D842899B7A200B6A512 /* Protocol */,
+				8B2696292899B274007AEEE9 /* Presentation */,
 				4DB9A34828996BAF0035C1B2 /* AppDelegate.swift */,
 				4DB9A34A28996BAF0035C1B2 /* SceneDelegate.swift */,
 				4DB9A34C28996BAF0035C1B2 /* ViewController.swift */,
@@ -88,8 +96,48 @@
 				8625A6B850225B23043576EA /* Pods-HorrorBM.debug.xcconfig */,
 				C80F767F1A2FCB4620705C5C /* Pods-HorrorBM.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		8B2696292899B274007AEEE9 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				8B26962A2899B28E007AEEE9 /* Search */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		8B26962A2899B28E007AEEE9 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				8B6AC8422899BE0700BD507A /* View */,
+				8B26962B2899B2B4007AEEE9 /* ViewController */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		8B26962B2899B2B4007AEEE9 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8B26962C2899B2E2007AEEE9 /* SearchMovieViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		8B6AC8422899BE0700BD507A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8B6AC8432899BE2300BD507A /* SearchMovieView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8BF80D842899B7A200B6A512 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				8BF80D852899B7D500B6A512 /* ViewConfiguration.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +258,9 @@
 				4DB9A34D28996BAF0035C1B2 /* ViewController.swift in Sources */,
 				4DB9A34928996BAF0035C1B2 /* AppDelegate.swift in Sources */,
 				4DB9A34B28996BAF0035C1B2 /* SceneDelegate.swift in Sources */,
+				8BF80D862899B7D500B6A512 /* ViewConfiguration.swift in Sources */,
+				8B26962D2899B2E2007AEEE9 /* SearchMovieViewController.swift in Sources */,
+				8B6AC8442899BE2300BD507A /* SearchMovieView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
