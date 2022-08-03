@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -15,9 +15,78 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="oi" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dOb-BW-hSK">
+                                <rect key="frame" x="107" y="585.5" width="200" height="75"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="Vxd-la-hr7"/>
+                                    <constraint firstAttribute="width" constant="200" id="ouZ-qY-XjM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="kC1-3I-dA6">
+                                <rect key="frame" x="12" y="410.5" width="390" height="75"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eHC-fG-31d">
+                                        <rect key="frame" x="0.0" y="0.0" width="339" height="75"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NNz-aZ-khn">
+                                        <rect key="frame" x="340" y="0.0" width="50" height="75"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="G0k-ik-27n"/>
+                                        </constraints>
+                                        <buttonConfiguration key="configuration" style="plain" image="square.and.arrow.up" catalog="system">
+                                            <color key="baseForegroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="serchPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mZN-sT-ekE"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="NNz-aZ-khn" secondAttribute="trailing" id="6fP-gh-eoV"/>
+                                    <constraint firstItem="eHC-fG-31d" firstAttribute="top" secondItem="kC1-3I-dA6" secondAttribute="top" id="6iW-qL-gbP"/>
+                                    <constraint firstItem="NNz-aZ-khn" firstAttribute="top" secondItem="kC1-3I-dA6" secondAttribute="top" id="EWn-di-Ig9"/>
+                                    <constraint firstAttribute="height" constant="75" id="Hil-qM-l9M"/>
+                                    <constraint firstAttribute="bottom" secondItem="eHC-fG-31d" secondAttribute="bottom" id="OxZ-tN-BbX"/>
+                                    <constraint firstItem="eHC-fG-31d" firstAttribute="leading" secondItem="kC1-3I-dA6" secondAttribute="leading" id="QEE-9E-LWa"/>
+                                    <constraint firstAttribute="bottom" secondItem="NNz-aZ-khn" secondAttribute="bottom" id="cec-uD-4MO"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxA-73-9Uo">
+                                <rect key="frame" x="186.5" y="67" width="41.5" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="t7F-vR-H1R"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="AccentColor"/>
+                        <constraints>
+                            <constraint firstItem="dOb-BW-hSK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="748-8j-Fhv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bxA-73-9Uo" secondAttribute="trailing" constant="186" id="7kZ-kE-aIm"/>
+                            <constraint firstItem="kC1-3I-dA6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Kbm-IZ-URR"/>
+                            <constraint firstItem="kC1-3I-dA6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MCv-Ax-ceD"/>
+                            <constraint firstItem="kC1-3I-dA6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="MPD-Te-dva"/>
+                            <constraint firstItem="dOb-BW-hSK" firstAttribute="top" secondItem="kC1-3I-dA6" secondAttribute="bottom" constant="100" id="UtI-M3-vwf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kC1-3I-dA6" secondAttribute="trailing" constant="12" id="c4R-dC-LsG"/>
+                            <constraint firstItem="bxA-73-9Uo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="23" id="oKQ-Vs-C2k"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="labelTest" destination="dOb-BW-hSK" id="eEN-xC-qoO"/>
+                        <outlet property="textFieldTest" destination="eHC-fG-31d" id="pG2-PF-ldN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -25,8 +94,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <namedColor name="AccentColor">
-            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.36900001764297485" green="0.36100000143051147" blue="0.9020000696182251" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
